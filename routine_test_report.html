@@ -506,38 +506,42 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
   /* ---------- Certificate ---------- */
   .stage{display:flex;justify-content:center;overflow-x:auto}
-  .sheet{background:var(--paper);color:var(--ink);width:794px;height:1123px;flex:0 0 794px;padding:38px;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.45);font-size:10px;line-height:1.26;overflow:hidden}
-  .title{text-align:center;margin-bottom:9px}
-  .title .t1{font-weight:700;font-size:14px}
-  .title .t2{font-weight:700;font-size:12.5px;margin-top:2px}
-  .title .t3{font-size:11px;margin-top:4px;letter-spacing:.01em}
+  .sheet{background:var(--paper);color:var(--ink);width:794px;height:1123px;flex:0 0 794px;padding:38px;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.45);font-family:"Cordia New","CordiaUPC","SarabunEmb","Tahoma",sans-serif;font-size:14px;line-height:1.2;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .title{text-align:center;margin-bottom:0.7em}
+  .title .t1{font-weight:700;font-size:1.4em}
+  .title .t2{font-weight:700;font-size:1.2em;margin-top:0.15em}
+  .title .t3{font-size:1.05em;margin-top:0.35em;letter-spacing:.01em}
   table.sec{border-collapse:collapse;width:100%;table-layout:fixed}
   table.sec + table.sec{margin-top:-1px}
-  .sec td,.sec th{border:1px solid var(--line);padding:3.5px 7px;vertical-align:middle;font-weight:400;word-wrap:break-word}
-  .band td{font-weight:700;font-size:13px;padding:2px 6px}
-  .band .en{font-weight:700;font-size:11.3px;display:block}
+  .sec td,.sec th{border:0.5px solid var(--line);padding:0.1em 0.6em;vertical-align:middle;font-weight:400;word-wrap:break-word}
+  .p1 td.lab{border-right:hidden}
+  .band td{font-weight:700;font-size:1.18em;padding:0.05em 0.6em;background:#d9d9d9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .band .en{font-weight:700;font-size:0.82em;display:block}
   .lab{font-weight:400}
-  .lab .en{display:block;font-size:10.2px;color:#000}
+  .lab .en{display:block;font-size:0.78em;color:#000}
   .ctr{text-align:center}
   .desc{font-weight:600}
-  .num{text-align:center;font-weight:700;white-space:nowrap}
-  .hd{text-align:center;font-weight:700;font-size:11.4px;background:#fff}
-  .sub-s{font-size:10.2px}
-  sup{font-size:8.4px;vertical-align:super}
-  .bx{display:inline-block;width:13px;height:13px;border:1px solid #000;text-align:center;line-height:12px;font-size:10px;font-weight:700;vertical-align:middle;font-family:"Tahoma",Arial,sans-serif}
-  .rc{padding-left:7px;white-space:nowrap}
-  .rc label{display:inline-block;margin-right:16px;cursor:pointer}
-  .rc .bx{margin-right:4px}
+  .num{text-align:center;font-weight:700;white-space:nowrap;vertical-align:top}
+  .hd{text-align:center;font-weight:700;font-size:0.86em;background:#fff}
+  .sub-s{font-size:0.78em}
+  sup{font-size:0.62em;vertical-align:super}
+  .bx{display:inline-block;width:1.15em;height:1.15em;border:1px solid #000;text-align:center;line-height:1.05em;font-size:0.92em;font-weight:700;vertical-align:middle;font-family:"Tahoma",Arial,sans-serif}
+  .rc{padding-left:0.5em;white-space:nowrap}
+  .rc label{display:inline-block;margin-right:1.2em;cursor:pointer}
+  .rc .bx{margin-right:0.3em}
   input.rb{position:absolute;opacity:0;width:0;height:0}
   .scen td{font-weight:400}
-  .ein{border:none;border-bottom:0;background:transparent;width:100%;font-family:inherit;font-size:12.4px;text-align:center;color:#000;padding:1px 0}
+  .ein{border:none;border-bottom:0;background:transparent;width:100%;font-family:inherit;font-size:1em;text-align:center;color:#000;padding:1px 0}
   .ein:focus{outline:none;background:#fffaf0}
-  .ein-static{display:inline-block;min-width:28px}
-  .note{font-size:10.3px;line-height:1.36}
+  .ein-static{display:inline-block;min-width:2.2em}
+  .note{font-size:0.8em;line-height:1.3}
   .note .nlab{font-weight:700}
   .sigwrap{white-space:nowrap}
-  .sig{height:30px;width:auto;display:inline-block;vertical-align:middle;margin-left:12px}
-  .phasewrap{}
+  .sig{height:2.04em;width:auto;display:inline-block;vertical-align:middle;margin-left:0.8em}
+  .phasecell{text-align:center}
+  .phgrp{display:inline-block;text-align:center;margin:0 0.5em;vertical-align:top}
+  .phgrp .pt{white-space:nowrap}
+  .phgrp .en{display:block;font-size:0.78em}
 
   @media print{
     @page{size:A4;margin:0}
@@ -545,7 +549,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     .wrap{display:block;max-width:none;padding:0}
     .panel,.actions{display:none !important}
     .stage{display:block}
-    .sheet{box-shadow:none;border-radius:0;margin:0;padding:0}
+    .sheet{box-shadow:none;border-radius:0;margin:0}
   }
 </style>
 </head>
@@ -558,7 +562,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       <svg class="spark" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#ffb627"/></svg>
       <h1>Routine Test Generator</h1>
     </div>
-    <p class="sub">Enter the inverter details. The date decodes from the serial number. Then save the certificate as a one-page PDF.</p>
+    <p class="sub">Enter the inverter details.</p>
 
     <div class="field">
       <label for="sn">Serial number</label>
@@ -626,7 +630,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     </div>
 
     <!-- PART 1 -->
-    <table class="sec">
+    <table class="sec p1">
       <colgroup><col style="width:19%"><col style="width:31%"><col style="width:19%"><col style="width:31%"></colgroup>
       <tr class="band"><td colspan="4">ส่วนที่ 1 : รายละเอียดอินเวอร์เตอร์<span class="en">PART 1 : INVERTER DETAILS</span></td></tr>
       <tr>
@@ -636,7 +640,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       <tr>
         <td class="lab">กำลังไฟฟ้าที่ผลิต (kW) :<span class="en">Power rating</span></td><td class="ctr" id="o_power">—</td>
         <td class="lab">จำนวนเฟส :<span class="en">Phase</span></td>
-        <td><span class="phasewrap"><span class="bx" id="ph1s"></span> 1 เฟส <span class="sub-s">Single phase</span> &nbsp; <span class="bx" id="ph3s"></span> 3 เฟส <span class="sub-s">Three phase</span></span></td>
+        <td class="phasecell"><span class="phgrp"><span class="pt"><span class="bx" id="ph1s"></span> 1 เฟส</span><span class="en">Single phase</span></span><span class="phgrp"><span class="pt"><span class="bx" id="ph3s"></span> 3 เฟส</span><span class="en">Three phase</span></span></td>
       </tr>
       <tr>
         <td class="lab">รุ่นเฟิร์มแวร์ :<span class="en">Firmware version</span></td><td class="ctr" id="o_sw">—</td>
@@ -646,29 +650,29 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
     <!-- PART 2 -->
     <table class="sec">
-      <colgroup><col style="width:6%"><col style="width:16%"><col style="width:15%"><col style="width:15%"><col style="width:10%"><col style="width:12%"><col style="width:26%"></colgroup>
+      <colgroup><col style="width:6%"><col style="width:20%"><col style="width:15%"><col style="width:15%"><col style="width:10%"><col style="width:11%"><col style="width:23%"></colgroup>
       <tr class="band"><td colspan="7">ส่วนที่ 2 : ผลการทดสอบประจำเครื่อง<span class="en">PART 2 : ROUTINE TEST RESULTS</span></td></tr>
 
-      <!-- 2.1 frequency -->
-      <tr><td class="num">2.1</td><td class="desc" colspan="6">การทดสอบช่วงความถี่การทำงาน (Operating frequency range test)</td></tr>
+      <!-- 2.1 frequency : section number spans the whole 2.1 block -->
+      <tr><td class="num" rowspan="5">2.1</td><td class="desc" colspan="6">การทดสอบช่วงความถี่การทำงาน (Operating frequency range test)</td></tr>
       <tr>
-        <td class="hd" colspan="2" rowspan="2"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result</td><td class="hd" rowspan="2">Result confirmation</td>
+        <td class="hd" rowspan="2"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result</td><td class="hd" rowspan="2">Result confirmation</td>
       </tr>
       <tr><td class="hd" colspan="2">Frequency (Hz)</td><td class="hd">Trip Time (sec.)</td><td class="hd">Trip Time (sec.)</td></tr>
       <tr>
-        <td class="lab" colspan="2">Underfrequency</td><td class="ctr" colspan="2">48.9</td><td class="ctr">&le; 0.1</td>
+        <td class="lab">Underfrequency</td><td class="ctr" colspan="2">48.9</td><td class="ctr">&le; 0.1</td>
         <td><input class="ein" data-rk="f_uf" value="0.072"></td><td>{{PF:f_uf}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Overfrequency</td><td class="ctr" colspan="2">51.1</td><td class="ctr">&le; 0.1</td>
+        <td class="lab">Overfrequency</td><td class="ctr" colspan="2">51.1</td><td class="ctr">&le; 0.1</td>
         <td><input class="ein" data-rk="f_of" value="0.084"></td><td>{{PF:f_of}}</td>
       </tr>
 
-      <!-- 2.2 voltage -->
-      <tr><td class="num">2.2</td><td class="desc" colspan="6">การทดสอบช่วงแรงดันการทำงาน (Operating voltage range test)</td></tr>
-      <tr class="scen"><td colspan="7"><span class="bx">X</span>&nbsp; Grid-connected inverter which connected to the grid at low voltage (230/400V) <sup>(1)</sup></td></tr>
+      <!-- 2.2 voltage : section number spans the whole 2.2 block -->
+      <tr><td class="num" rowspan="16">2.2</td><td class="desc" colspan="6">การทดสอบช่วงแรงดันการทำงาน (Operating voltage range test)</td></tr>
+      <tr class="scen"><td colspan="6"><span class="bx">X</span>&nbsp; Grid-connected inverter which connected to the grid at low voltage (230/400V) <sup>(1)</sup></td></tr>
       <tr>
-        <td class="hd" colspan="2" rowspan="3"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result <sup>(3)</sup></td><td class="hd" rowspan="3">Result confirmation</td>
+        <td class="hd" rowspan="3"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result <sup>(3)</sup></td><td class="hd" rowspan="3">Result confirmation</td>
       </tr>
       <tr>
         <td class="hd"><span class="bx">X</span> Line-Neutral <sup>(2)</sup></td>
@@ -677,51 +681,49 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       </tr>
       <tr><td class="hd">Voltage (V)</td><td class="hd">Voltage (V)</td><td class="hd">(sec.)</td><td class="hd">(sec.)</td></tr>
       <tr>
-        <td class="lab" colspan="2">Undervoltage level 2 <sup>(4)</sup></td>
+        <td class="lab">Undervoltage level 2 <sup>(4)</sup></td>
         <td class="ctr"><span class="bx">X</span> 114 or <span class="bx"></span> ____</td>
         <td class="ctr"><span class="bx"></span> 198 or <span class="bx"></span> ____</td>
         <td class="ctr">&le; 0.1</td><td><input class="ein" data-rk="v_uv2" value="0.084"></td><td>{{PF:v_uv2}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Undervoltage level 1</td>
+        <td class="lab">Undervoltage level 1</td>
         <td class="ctr">199</td><td class="ctr">345</td><td class="ctr">&le; 2</td>
         <td><input class="ein" data-rk="v_uv1" value="1.370"></td><td>{{PF:v_uv1}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Overvoltage level 1</td>
+        <td class="lab">Overvoltage level 1</td>
         <td class="ctr">241</td><td class="ctr">417</td><td class="ctr">&le; 2</td>
         <td><input class="ein" data-rk="v_ov1" value="1.560"></td><td>{{PF:v_ov1}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Overvoltage level 2 <sup>(4)</sup></td>
+        <td class="lab">Overvoltage level 2 <sup>(4)</sup></td>
         <td class="ctr"><span class="bx">X</span> 311 or <span class="bx"></span> ____</td>
         <td class="ctr"><span class="bx"></span> 539 or <span class="bx"></span> ____</td>
         <td class="ctr">&le; 0.05</td><td><input class="ein" data-rk="v_ov2" value="0.042"></td><td>{{PF:v_ov2}}</td>
       </tr>
-
-      <!-- >= 12kV -->
-      <tr class="scen"><td colspan="7"><span class="bx"></span>&nbsp; Grid-connected inverter which connected to the grid at voltage &ge; 12kV <sup>(1)</sup></td></tr>
+      <tr class="scen"><td colspan="6"><span class="bx"></span>&nbsp; Grid-connected inverter which connected to the grid at voltage &ge; 12kV <sup>(1)</sup></td></tr>
       <tr>
-        <td class="hd" colspan="2" rowspan="2"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result <sup>(3)</sup></td><td class="hd" rowspan="2">Result confirmation</td>
+        <td class="hd" rowspan="2"></td><td class="hd" colspan="3">Trip Setting</td><td class="hd">Test Result <sup>(3)</sup></td><td class="hd" rowspan="2">Result confirmation</td>
       </tr>
       <tr>
         <td class="hd" colspan="2">Voltage (% of rated output voltage)</td><td class="hd">Trip time (sec.)</td><td class="hd">Trip time (sec.)</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Undervoltage level 2 <sup>(4)</sup></td>
+        <td class="lab">Undervoltage level 2 <sup>(4)</sup></td>
         <td class="ctr" colspan="2"><span class="bx"></span> 50% or <span class="bx"></span> _____ %</td>
         <td class="ctr">&le; 0.1</td><td><input class="ein" value=""></td><td>{{PFE:h_uv2}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Undervoltage level 1</td>
+        <td class="lab">Undervoltage level 1</td>
         <td class="ctr" colspan="2">85%</td><td class="ctr">&le; 2</td><td><input class="ein" value=""></td><td>{{PFE:h_uv1}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Overvoltage level 1</td>
+        <td class="lab">Overvoltage level 1</td>
         <td class="ctr" colspan="2">110%</td><td class="ctr">&le; 2</td><td><input class="ein" value=""></td><td>{{PFE:h_ov1}}</td>
       </tr>
       <tr>
-        <td class="lab" colspan="2">Overvoltage level 2 <sup>(4)</sup></td>
+        <td class="lab">Overvoltage level 2 <sup>(4)</sup></td>
         <td class="ctr" colspan="2"><span class="bx"></span> 135% or <span class="bx"></span> _____ %</td>
         <td class="ctr">&le; 0.05</td><td><input class="ein" value=""></td><td>{{PFE:h_ov2}}</td>
       </tr>
@@ -749,7 +751,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         <td class="lab">เบอร์ติดต่อ :<span class="en">Telephone</span></td><td id="o_phone">—</td>
       </tr>
       <tr>
-        <td class="lab">อีเมล์ :<span class="en">Email address</span></td><td id="o_email">—</td>
+        <td class="lab">อีเมล :<span class="en">Email address</span></td><td id="o_email">—</td>
         <td class="lab">วันที่ :<span class="en">Date</span></td><td id="o_repdate">—</td>
       </tr>
       <tr><td class="note" colspan="4">หมายเหตุ: * ผู้รับรองข้อมูลต้องเป็นระดับผู้จัดการแผนกทดสอบหรือสูงกว่า <span class="sub-s">(Note: * Approver must be testing department manager or higher.)</span></td></tr>
@@ -797,7 +799,7 @@ function decodeSN(raw){
   var day=15+(h%11);                 // day 15..25 (matches the official example)
   return {year:year, month:month, day:day, date:new Date(year,month-1,day)};
 }
-function fmt(d){ return String(d.getDate()).padStart(2,'0')+'-'+MON[d.getMonth()]+'-'+d.getFullYear(); }
+function fmt(d){ return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear(); }
 
 // test results mirror the Excel RANDBETWEEN formulas, 3 decimals, seeded by SN
 var RK={ f_uf:[70,85,1000], f_of:[70,85,1000], v_uv2:[70,85,1000], v_uv1:[130,160,100], v_ov1:[130,160,100], v_ov2:[30,45,1000] };
@@ -847,6 +849,16 @@ function render(){
   setText('o_email',$('email').value);
   var rep=$('repdate').value.trim() || dval || fmt(new Date());
   setText('o_repdate',rep);
+  autoFitSheet();
+}
+function autoFitSheet(){
+  var s=$('sheet'); if(!s) return;
+  var lo=7, hi=30, best=7;
+  for(var i=0;i<9;i++){
+    var mid=(lo+hi)/2; s.style.fontSize=mid+'px';
+    if(s.scrollHeight<=s.clientHeight){ best=mid; lo=mid; } else { hi=mid; }
+  }
+  s.style.fontSize=best+'px';
 }
 // ---------- model database (from Huawei_Inverter_Lookup.xlsx) ----------
 var DB = [{"model": "SUN2000-2KTL-L0", "power": 2, "sw": "V100R001C00SPC XXX", "phase": 1}, {"model": "SUN2000-3K-LB0", "power": 3, "sw": "V300R024CXX SPC XXX", "phase": 1}, {"model": "SUN2000-3KTL-L0", "power": 3, "sw": "V100R001C00SPC XXX", "phase": 1}, {"model": "SUN2000-3KTL-L1", "power": 3, "sw": "V200R001C00SPC XXX", "phase": 1}, {"model": "SUN2000-4KTL-L0", "power": 4, "sw": "V100R001C00", "phase": 1}, {"model": "SUN2000-5K-LB0", "power": 5, "sw": "V300R024CXX SPC XXX", "phase": 1}, {"model": "SUN2000-5K-MAP0", "power": 5, "sw": "V200R024CXX SPC XXX", "phase": 3}, {"model": "SUN2000-5KTL-L0", "power": 5, "sw": "V100R001C00SPC XXX", "phase": 1}, {"model": "SUN2000-5KTL-L1", "power": 5, "sw": "V200R001C00SPC XXX", "phase": 1}, {"model": "SUN2000-5KTL-M0", "power": 5, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-5KTL-M1", "power": 5, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000L-5KTL", "power": 5, "sw": "V100R001C00", "phase": 1}, {"model": "SUN2000-10K-LC0", "power": 10, "sw": "V100R023CXX SPC XXX", "phase": 1}, {"model": "SUN2000-10K-MAP0", "power": 10, "sw": "V200R024CXX SPC XXX", "phase": 3}, {"model": "SUN2000-10KTL-M0", "power": 10, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-10KTL-M1", "power": 10, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-12KTL", "power": 12, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-12KTL-M0", "power": 12, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-12KTL-M2", "power": 12, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-12KTL-M5", "power": 12, "sw": "V200RXXX CXX SPCXXX", "phase": 3}, {"model": "SUN2000-15K-MB0", "power": 15, "sw": "V200R023CXX SPC XXX", "phase": 3}, {"model": "SUN2000-15KTL-M2", "power": 15, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-15KTL-M5", "power": 15, "sw": "V200RXXXCXXSPCXXX", "phase": 3}, {"model": "SUN2000-20K-MB0", "power": 20, "sw": "V200R023CXX SPC XXX", "phase": 3}, {"model": "SUN2000-20KTL", "power": 20, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-20KTL-M0", "power": 20, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-20KTL-M2", "power": 20, "sw": "V100R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-20KTL-M5", "power": 20, "sw": "V200RXXXCXXSPCXXX", "phase": 3}, {"model": "SUN2000-30K-MC0", "power": 30, "sw": "V800R025C00SPC XXX", "phase": 3}, {"model": "SUN2000-30KTL-M3", "power": 30, "sw": "V100R001C20SPC XXX", "phase": 3}, {"model": "SUN2000-33KTL", "power": 30, "sw": "V200R001", "phase": 3}, {"model": "SUN2000-36KTL", "power": 36, "sw": "V200R002C00SPC XXX", "phase": 3}, {"model": "SUN2000-36KTL-M3", "power": 36, "sw": "V100R001C20SPC XXX", "phase": 3}, {"model": "SUN2000-40K-MC0", "power": 40, "sw": "V800R025C00SPC XXX", "phase": 3}, {"model": "SUN2000-40KTL-M3", "power": 40, "sw": "V100R001C20SPC XXX", "phase": 3}, {"model": "SUN2000-42KTL", "power": 42, "sw": "V200R002C01SPC XXX", "phase": 3}, {"model": "SUN2000-50K-MC0", "power": 50, "sw": "V800R025C00SPC XXX", "phase": 3}, {"model": "SUN2000-50KTL-M3", "power": 50, "sw": "V200R023C00SPC XXX", "phase": 3}, {"model": "SUN2000-60KTL-M0", "power": 60, "sw": "V300R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-60KTL-M0", "power": 60, "sw": "V300R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-65KTL-M0", "power": 65, "sw": "V300R001", "phase": 3}, {"model": "SUN2000-100KTL-M1", "power": 100, "sw": "V500RXXXC00SPC XXX", "phase": 3}, {"model": "SUN2000-100KTL-M2", "power": 100, "sw": "V500R023C00SPC XXX", "phase": 3}, {"model": "SUN2000-105KTL-H1", "power": 105, "sw": "V200R001C30SPC XXX", "phase": 3}, {"model": "SUN2000-115KTL-M2", "power": 115, "sw": "V500R023C00SPC XXX", "phase": 3}, {"model": "SUN2000-150K-MG0", "power": 150, "sw": "V600R023C10SPC XXX", "phase": 3}, {"model": "SUN5000-150K-MG0", "power": 150, "sw": "V600R023C10SPC XXX", "phase": 3}, {"model": "SUN2000-185KTL-H1", "power": 175, "sw": "V300R001C00SPC XXX", "phase": 3}, {"model": "SUN2000-215KTL-H0", "power": 200, "sw": "V300R001", "phase": 3}, {"model": "SUN2000-215KTL-H3", "power": 200, "sw": "V300R001", "phase": 3}, {"model": "SUN2000-330KTL-H1", "power": 300, "sw": "V500R023C00SPC XXX", "phase": 3}];
@@ -873,6 +885,7 @@ $('sn').addEventListener('change', fillTestValues);
 fillTestValues();
 syncChecks();
 render();
+if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(function(){ autoFitSheet(); }); }
 
 // ---------- one-page PDF export ----------
 function buildPrintClone(){

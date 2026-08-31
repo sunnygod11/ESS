@@ -2,8 +2,10 @@
   "buildCommand": "echo 'Build complete'",
   "outputDirectory": ".",
   "framework": "other",
-  "env": [],
   "git": {
     "deploymentEnabled": true
-  }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/routine_test_report.html" }
+  ]
 }
