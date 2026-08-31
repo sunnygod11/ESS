@@ -1,0 +1,9 @@
+{
+  "buildCommand": "echo 'Build complete'",
+  "outputDirectory": ".",
+  "framework": "other",
+  "env": [],
+  "git": {
+    "deploymentEnabled": true
+  }
+}
